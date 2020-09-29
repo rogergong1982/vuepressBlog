@@ -1,0 +1,53 @@
+module.exports = {
+    title: '小宝的一亩三分地',  // 网站标题
+    description: '龚小宝的个人网站',    // 网站描述  
+    head: [ //注入当前页面的head标签中
+        // 网页标签图标，'/'指向docs/.vuepress/public 文件目录
+        ['link', { rel: 'icon', href: '/img/favicon.ico' }]
+    ],
+    base: '/',// 设置站点根路径
+    dest: './ROOT',  // 设置输出目录
+    themeConfig: {
+		nav:[
+			{text:'首页',link:'/'},
+			{
+				text:'python',
+				items: [
+					{text :'基础', link: '/python/base'},
+					{text :'进阶', link: '/python/fluent'},
+					{text :'爬虫', link: '/python/spider'},
+					{text :'数据分析', link: '/python/data'},
+					{text :'其他', link: '/python/other'},
+				]
+			},
+			{
+				text:'爬虫',
+				items: [
+					{text :'scrapy', link: '/spider/scrapy'},
+					{text :'js逆向', link: '/spider/jsreverse'},
+					{text :'app逆向', link: '/spider/appreverse'},
+					{text :'反爬虫', link: '/spider/anticrawl'},
+				]
+			},
+			{
+				text:'数据',
+				items: [
+					{text :'数据源', link: '/data/datasource'},
+					{text :'数据分析', link: '/data/datamining'},
+					{text :'数据服务', link: '/data/dataservice'},
+				]
+			},
+			{
+				text:'营销',
+				items: [
+					{text :'自动营销', link: '/marketing/auto'},
+					{text :'精准营销', link: '/marketing/customer'},
+					{text :'业务分析', link: '/marketing/service'},
+				]
+			},
+			{text:'其他',link:'https://qq.com'},
+		],
+		//sidebar: 'auto', // 侧边栏配置
+		//sidebarDepth: 2, // 侧边栏显示2级
+	}
+}
